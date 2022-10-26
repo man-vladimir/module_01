@@ -1,0 +1,33 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.4)
+    gyoku (1.4.0)
+      builder (>= 2.1.2)
+      rexml (~> 3.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.4)
+    rack-protection (3.0.2)
+      rack
+    rexml (3.1.9.1)
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.2)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.2)
+      tilt (~> 2.0)
+    tilt (2.0.11)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  gyoku (= 1.4.0)
+  sinatra (= 3.0.2)
+
+RUBY VERSION
+   ruby 2.6.9p207
+
+BUNDLED WITH
+   2.3.23
