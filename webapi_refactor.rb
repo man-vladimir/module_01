@@ -126,9 +126,11 @@ put '/users/:first_name' do |first_name|
 end
 
 patch '/users/:first_name' do |first_name|
-  halt 415 unless request.env['CONTENT_TYPE'] == 'application/json'
-  halt 404 unless users[first_name.to_sym]
+
+  halt 415 unless request.env['CONTENT_TYPE'] == 'application/json'  
   halt 410 if deleted_users[first_name.to_sym]
+  halt 404 unless users[first_name.to_sym]
+
   begin
     user_client = JSON.parse(request.body.read)
   rescue JSON::ParserError => e
